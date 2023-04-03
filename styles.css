@@ -1,0 +1,316 @@
+/* ================ */
+/* Variables */
+/* ================ */
+
+:root {
+  --paleBlue: hsl(225, 100%, 94%);
+  --veryPaleBlue: hsl(225, 100%, 98%);
+  --desaturatedBlue: hsl(224, 23%, 55%);
+  --brightBlue: hsl(245, 75%, 52%);
+  --darkBlue: hsl(223, 47%, 23%);
+}
+
+/* Weights: 500, 700, 900 */
+
+/* ================ */
+/* Reset */
+/* ================ */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  transition: all .5s ease;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/* ================ */
+/* Design Templates
+Used to refine designs 
+live in browser */
+/* ================ */
+
+.template-mobile {
+  width: 375px;
+  height: 700px;
+  position: absolute;
+  opacity: .25;
+  display: none;
+}
+
+.template-desktop {
+  width: 1440px;
+  height: 900px;
+  position: absolute;
+  opacity: 1;
+  z-index: -1;
+  left: 0;
+  /* top: 10px; */
+  display: none;
+}
+
+/* ================ */
+/* Styles */
+/* ================ */
+
+
+.attribution {
+  opacity: 0.7;
+  font-size: 14px;
+  text-align: center;
+  /* margin: 5rem 0 1rem;
+  padding: 0 1rem; */
+  line-height: 1.6;
+}
+.attribution a {
+  color: var(--brightBlue);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+body {
+  background-color: var(--paleBlue);
+  background-image: url(images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: var(--desaturatedBlue);
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: 'Red Hat Display', sans-serif;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem 24px 3.5rem;
+}
+
+.card {
+  /* max-width: 350px; */
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 2.5rem 3rem -.85rem hsla(245, 55%, 52%, 20%);
+}
+
+.card-content {
+  padding: 1.5rem;
+  letter-spacing: .5px;
+}
+
+h1 {
+  color: var(--darkBlue);
+  font-weight: 900;
+  font-size: 21px;
+  margin: 6px 0 1rem;
+}
+
+.plan-description {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: normal;
+  max-width: 90%;
+  margin: 0 auto 25px;
+  line-height: 1.6;
+}
+
+.pricing-info {
+  display: flex;
+  align-items: center;
+  background: var(--veryPaleBlue);
+  border-radius: 12px;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 0 auto 24px;
+  font-size: 14px;
+  font-weight: 700;
+  max-width: 350px;
+}
+
+.plan-type-price-group {
+  margin-left: -1.5rem;
+  letter-spacing: normal;
+}
+
+.plan-type {
+  font-weight: 900;
+  color: var(--darkBlue);
+}
+
+.plan-change {
+ font-size: 13px;
+ color: var(--brightBlue);
+ transition: all .3s ease;
+ text-decoration: underline;
+}
+
+.plan-change:hover {
+ color: var(--desaturatedBlue);
+ text-decoration: none;
+}
+
+.btn {
+  font-weight: 900;
+  text-decoration: none;
+  display: block;
+  font-size: .875rem;
+  letter-spacing: .5px;
+}
+
+.btn-submit {
+  color: #fff;
+  background-color: var(--brightBlue);
+  padding: 15px;
+  border-radius: .8em;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1rem 1rem hsla(245, 75%, 52%, 20%);
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-submit:hover {
+  background-color: hsla(245, 75%, 52%, 65%);
+}
+
+.btn-cancel {
+  color: var(--desaturatedBlue);
+  margin-bottom: .5rem;
+}
+
+.btn-cancel:hover {
+  color: var(--darkBlue);
+}
+
+footer {
+  position: absolute;
+  height: 40px;
+  bottom: 0;
+}
+
+
+/* ================ */
+/* Media Queries */
+/* ================ */
+
+ /* @media (min-width: 530px) and (min-height: 880px) {
+    body {
+      height: 100vh;
+    }
+ } */
+ @media (min-height: 860px) {
+    body {
+      height: 100vh;
+    }
+ }
+
+ @media (max-width: 353px) {
+  h1 {
+    line-height: 1.1;
+  }
+    .pricing-info {
+      flex-direction: column;
+    }
+    .plan-type-price-group {
+  margin: .5rem 0;
+    }
+    .plan-change {
+      font-size: 11px;
+    }
+ }
+
+ @media (min-width: 415px) {
+    body {
+      background-image: url(images/pattern-background-desktop.svg);
+    }
+    .card {
+      max-width: 450px;
+    }
+    h1 {
+      font-size: 27px;
+      margin: 18px 0 1rem;
+    }
+    .plan-description {
+      font-size: 16px;
+      margin-bottom: 2rem;
+    }
+    .plan-type-price-group {
+      /* margin-left: -4.75rem; */
+      margin-left: -25%;
+      letter-spacing: normal;
+    }
+    .pricing-info {
+      font-size: 16px;
+      margin-bottom: 2.5rem;
+      padding: 1rem 1.5rem;
+    }
+    .plan-type {
+      margin-top: -5px;
+    }
+    .plan-change {
+      font-size: 13px;
+    }
+    .btn-cancel {
+      margin-top: 30px;
+      margin-bottom: 22px;
+    }
+ }
+/* 
+Mobile: 375px
+Desktop: 1440px
+*/
