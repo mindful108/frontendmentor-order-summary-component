@@ -33,8 +33,8 @@ Mobile
 
 ### Links
 
-- [Solution code on Github](https://github.com/mindful108/frontendmentor-product-preview-card-component.git)
-- [Live Solution](https://mindful108.github.io/frontendmentor-product-preview-card-component/)
+- [Solution code on Github](https://github.com/mindful108/frontendmentor-order-summary-component)
+- [Live Solution](https://frontendmentor-order-summary-component-six.vercel.app)
 
 ### Built with
 
