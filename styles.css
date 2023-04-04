@@ -22,7 +22,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  transition: all .5s ease;
+  /* transition: all .5s ease; */
 }
 
 body,
@@ -200,8 +200,8 @@ h1 {
 }
 
 .plan-change:hover {
- color: var(--desaturatedBlue);
- text-decoration: none;
+  color: var(--desaturatedBlue);
+  text-decoration: none;
 }
 
 .btn {
@@ -222,6 +222,7 @@ h1 {
   max-width: 350px;
   margin-left: auto;
   margin-right: auto;
+  transition: all .3s ease;
 }
 
 .btn-submit:hover {
@@ -231,6 +232,7 @@ h1 {
 .btn-cancel {
   color: var(--desaturatedBlue);
   margin-bottom: .5rem;
+  transition: all .3s ease;
 }
 
 .btn-cancel:hover {
