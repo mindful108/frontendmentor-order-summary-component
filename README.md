@@ -24,11 +24,8 @@ Users should be able to:
 
 ### Screenshots
 
-Desktop
+Desktop and Mobile
 ![Screenshot Desktop](screenshot.jpg)
-
-Mobile
-![Screenshot Mobile](screenshot-mobile.jpg)
 
 
 ### Links
